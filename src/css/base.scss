@@ -1,0 +1,39 @@
+/*
+ * Copyright (c) 2025 vinici.us.com. All Rights Reserved.
+ * Licensed under the MIT license.
+ */
+
+/* Reset and Base Styles */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	font: var(--font-size-base) var(--font-family-base);
+	line-height: var(--line-height-normal);
+	color: var(--color-text);
+	background: var(--color-background);
+	-webkit-font-smoothing: antialiased;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--font-primary);
+	line-height: 1.6;
+	color: var(--color-black);
+	background: var(--color-white);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	padding: 0;
+}
+
+hr {
+	border: 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}

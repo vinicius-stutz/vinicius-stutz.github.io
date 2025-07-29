@@ -1,0 +1,64 @@
+/*
+ * Copyright (c) 2025 vinici.us.com. All Rights Reserved.
+ * Licensed under the MIT license.
+ */
+
+%link-underline-base {
+	color: var(--color-black) !important;
+	position: relative;
+	overflow: hidden;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background-color: currentColor;
+		transition: width var(--transition-normal);
+	}
+
+	&:hover::after,
+	&:active::after,
+	&.active::after {
+		width: 100%;
+	}
+}
+
+@keyframes bounce {
+	0%,
+	20%,
+	50%,
+	80%,
+	100% {
+		transform: translateY(0);
+	}
+	40% {
+		transform: translateY(-10px);
+	}
+	60% {
+		transform: translateY(-5px);
+	}
+}
+
+/* Animations */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes slideIn {
+	from {
+		opacity: 0;
+		transform: scale(0.9) translateY(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1) translateY(0);
+	}
+}

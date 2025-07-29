@@ -1,0 +1,35 @@
+/*
+ * Copyright (c) 2025 vinici.us.com. All Rights Reserved.
+ * Licensed under the MIT license.
+ */
+
+/* Sections */
+.section {
+	padding: var(--section-padding);
+	position: relative;
+
+	&--light {
+		background-color: var(--color-white);
+		color: var(--color-black);
+
+		.section-title {
+			color: var(--color-black);
+		}
+	}
+
+	&--dark {
+		background-color: var(--color-black);
+		color: var(--color-white);
+	}
+
+	&-title {
+		margin-bottom: 50px;
+	}
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+	.section {
+		padding: 60px 0;
+	}
+}

@@ -1,0 +1,71 @@
+/*
+ * Copyright (c) 2025 vinici.us.com. All Rights Reserved.
+ * Licensed under the MIT license.
+ */
+
+/* Contact */
+.contact-section {
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+
+	.contact-map {
+		background: url("../images/Blueprint-1753505941810.jpg") no-repeat center;
+		background-size: cover;
+		position: absolute;
+		inset: 0; // shorthand for top/left/right/bottom: 0;
+		z-index: 1;
+	}
+
+	.contact-overlay {
+		position: absolute;
+		background-color: rgba(255, 255, 255, 0.2);
+		font-size: 11px;
+		font-weight: 600;
+		padding: 4px 8px;
+		right: 0;
+		bottom: 0;
+	}
+
+	.contact-container {
+		position: relative;
+		z-index: 2;
+
+		.contact-card {
+			background-color: rgba(255, 255, 255, 1);
+			color: var(--color-black);
+			padding: 50px;
+			border-radius: var(--radius-lg);
+			box-shadow: var(--shadow-lg);
+			max-width: 700px;
+			margin: 0 auto;
+
+			h2 {
+				color: var(--color-black);
+			}
+
+			.contact-disclaimer {
+				margin-bottom: var(--space-20);
+				line-height: 1.6;
+
+				a {
+					color: var(--color-primary);
+					font-weight: 600;
+				}
+			}
+
+			.contact-form {
+				margin-top: 30px;
+			}
+		}
+	}
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.contact-card {
+		margin: var(--space-20);
+		padding: var(--space-32) var(--space-20);
+	}
+}

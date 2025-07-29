@@ -1,0 +1,125 @@
+/*
+ * Copyright (c) 2025 vinici.us.com. All Rights Reserved.
+ * Licensed under the MIT license.
+ */
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-primary);
+	font-weight: 700;
+	margin: 0;
+	margin-bottom: 1rem;
+	font-weight: var(--font-weight-semibold);
+	line-height: var(--line-height-tight);
+	color: var(--color-text);
+	letter-spacing: var(--letter-spacing-tight);
+}
+
+.section--dark {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: var(--color-white);
+	}
+}
+
+h1 {
+	font-size: var(--font-size-3xl);
+	font-weight: var(--font-weight-normal);
+	line-height: var(--line-height-normal);
+	height: fit-content;
+}
+h2 {
+	font-size: var(--font-size-4xl);
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-weight: var(--font-weight-bold);
+	text-align: left;
+}
+h3 {
+	font-size: var(--font-size-2xl);
+	font-weight: var(--font-weight-medium);
+	line-height: var(--line-height-tight);
+	text-align: left;
+}
+h4 {
+	font-size: var(--font-size-xl);
+}
+h5 {
+	font-size: var(--font-size-lg);
+}
+h6 {
+	font-size: var(--font-size-md);
+}
+
+p {
+	margin: 0;
+	margin-bottom: var(--font-size-base);
+}
+
+a {
+	color: var(--color-primary);
+	text-decoration: none;
+	position: relative;
+	transition: color var(--duration-fast) var(--ease-standard);
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active {
+		color: var(--color-primary-hover);
+	}
+}
+
+a:visited {
+	color: inherit;
+}
+
+code,
+pre {
+	font-family: var(--font-family-mono);
+	font-size: calc(var(--font-size-base) * 0.95);
+	background-color: var(--color-secondary);
+	border-radius: var(--radius-sm);
+}
+
+code {
+	padding: var(--space-1) var(--space-4);
+}
+
+pre {
+	padding: var(--space-16);
+	margin: var(--space-16) 0;
+	overflow: auto;
+	border: 1px solid var(--color-border);
+
+	code {
+		background: none;
+		padding: 0;
+	}
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+	h2 {
+		font-size: var(--font-size-2xl);
+	}
+}
+
+@media (max-width: 768px) {
+	h2 {
+		font-size: var(--font-size-3xl);
+	}
+
+	h3 {
+		font-size: var(--font-size-xl);
+	}
+}
