@@ -27,6 +27,7 @@
 	"homepage": "https://github.com/vinicius-stutz/vinicius-stutz.github.io/#readme",
 	"devDependencies": {
 		"gh-pages": "^6.3.0",
+		"sass-embedded": "^1.89.2",
 		"vite": "^7.0.4"
 	}
 }
