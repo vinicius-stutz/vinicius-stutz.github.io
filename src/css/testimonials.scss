@@ -1,0 +1,54 @@
+/*
+ * Copyright (c) 2025 vinici.us.com. All Rights Reserved.
+ * Licensed under the MIT license.
+ */
+
+.testimonials {
+	&-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 30px;
+	}
+}
+
+.testimonial {
+	&-card {
+		background-color: var(--color-white);
+		color: var(--color-black);
+		padding: 30px;
+		border-radius: 15px;
+		border: 1px solid var(--color-gray-200);
+		transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+		cursor: default !important;
+
+		&:hover {
+			transform: translateY(-5px);
+			box-shadow: var(--shadow-md);
+			border: 1px solid var(--color-gray-300);
+		}
+	}
+
+	&-text {
+		font-style: italic;
+		margin-bottom: 20px;
+		line-height: 1.6;
+	}
+
+	&-author {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+	}
+
+	&-avatar {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+
+	&-name {
+		font-weight: 600;
+		font-size: 1.1rem;
+	}
+}

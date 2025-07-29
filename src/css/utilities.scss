@@ -1,0 +1,85 @@
+/*
+ * Copyright (c) 2025 vinici.us.com. All Rights Reserved.
+ * Licensed under the MIT license.
+ */
+
+/* Utility classes */
+.flex {
+	display: flex;
+}
+.flex-col {
+	flex-direction: column;
+}
+.items-center {
+	align-items: center;
+}
+.justify-center {
+	justify-content: center;
+}
+.justify-between {
+	justify-content: space-between;
+}
+.no-scroll {
+	overflow: hidden;
+}
+
+@each $n in 4, 8, 16, 30 {
+	.gap-#{$n} {
+		gap: var(--space-#{$n});
+	}
+	.mt-#{$n} {
+		margin-top: var(--space-#{$n});
+	}
+	.mb-#{$n} {
+		margin-bottom: var(--space-#{$n});
+	}
+	.mx-#{$n} {
+		margin-left: var(--space-#{$n});
+		margin-right: var(--space-#{$n});
+	}
+	.my-#{$n} {
+		margin-top: var(--space-#{$n});
+		margin-bottom: var(--space-#{$n});
+	}
+	.py-#{$n} {
+		padding-top: var(--space-#{$n});
+		padding-bottom: var(--space-#{$n});
+	}
+	.px-#{$n} {
+		padding-left: var(--space-#{$n});
+		padding-right: var(--space-#{$n});
+	}
+}
+
+.m-0 {
+	margin: 0;
+}
+.p-0 {
+	padding: 0;
+}
+
+.block {
+	display: block;
+}
+.hidden {
+	display: none;
+}
+
+/* Accessibility */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0); /* fallback */
+	clip-path: inset(50%);
+	white-space: nowrap;
+	border: 0;
+}
+
+:focus-visible {
+	outline: var(--focus-outline);
+	outline-offset: 2px;
+}

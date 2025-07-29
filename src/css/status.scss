@@ -1,0 +1,49 @@
+/*
+ * Copyright (c) 2025 vinici.us.com. All Rights Reserved.
+ * Licensed under the MIT license.
+ */
+
+/* Status indicators - optimized with SCSS map and loop */
+$status-types: (
+	success: (
+		rgb: 33 128 141,
+		color: var(--color-success),
+	),
+	error: (
+		rgb: 192 21 47,
+		color: var(--color-error),
+	),
+	warning: (
+		rgb: 168 75 47,
+		color: var(--color-warning),
+	),
+	info: (
+		rgb: 98 108 113,
+		color: var(--color-info),
+	),
+);
+
+.status {
+	display: inline-flex;
+	align-items: center;
+	padding: var(--space-6) var(--space-12);
+	border-radius: var(--radius-full);
+	font-weight: var(--font-weight-medium);
+	font-size: var(--font-size-sm);
+}
+
+@each $type, $props in $status-types {
+	.status--#{$type} {
+		$rgb: map-get($props, rgb);
+		$color: map-get($props, color);
+
+		background-color: rgba(
+			var(--color-#{$type}-rgb, #{$rgb}),
+			var(--status-bg-opacity)
+		);
+		color: #{$color};
+		border: 1px
+			solid
+			rgba(var(--color-#{$type}-rgb, #{$rgb}), var(--status-border-opacity));
+	}
+}

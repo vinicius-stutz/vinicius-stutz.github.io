@@ -1,0 +1,52 @@
+/*
+ * Copyright (c) 2025 vinici.us.com. All Rights Reserved.
+ * Licensed under the MIT license.
+ */
+
+/* Form elements */
+.form-control {
+	display: block;
+	width: 100%;
+	padding: var(--space-8) var(--space-12);
+	font-size: var(--font-size-md);
+	line-height: 1.5;
+	color: var(--color-text);
+	background-color: var(--color-surface);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-base);
+	transition: border-color var(--duration-fast) var(--ease-standard),
+		box-shadow var(--duration-fast) var(--ease-standard);
+
+	&:focus {
+		border-color: var(--color-primary);
+		outline: var(--focus-outline);
+	}
+}
+
+textarea.form-control {
+	font-family: var(--font-family-base);
+	font-size: var(--font-size-base);
+}
+
+select.form-control {
+	padding: var(--space-8) var(--space-12);
+	padding-right: var(--space-32);
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-image: var(--select-caret-light);
+	background-repeat: no-repeat;
+	background-position: right var(--space-12) center;
+	background-size: 16px;
+}
+
+.form-label {
+	display: block;
+	margin-bottom: var(--space-8);
+	font-weight: var(--font-weight-medium);
+	font-size: var(--font-size-sm);
+}
+
+.form-group {
+	margin-bottom: var(--space-16);
+}

@@ -1,0 +1,157 @@
+/*
+ * Copyright (c) 2025 vinici.us.com. All Rights Reserved.
+ * Licensed under the MIT license.
+ */
+
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(255, 255, 255, 0.95);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	z-index: 999;
+	transition: all var(--transition-normal);
+
+	&.scrolled {
+		background-color: rgba(255, 255, 255, 0.8);
+		-webkit-backdrop-filter: saturate(180%) blur(16px);
+		backdrop-filter: saturate(180%) blur(16px);
+		border-bottom: 1px solid rgba(39, 39, 42, 0.1);
+	}
+
+	&-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: var(--navbar-height);
+		max-width: var(--container-max-width);
+		margin: 0 auto;
+		padding: 0 var(--space-20);
+	}
+
+	&-brand {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		font-weight: 600;
+		color: var(--color-black);
+		cursor: pointer;
+	}
+
+	&-logo {
+		height: 2.4rem;
+		width: 2.4rem;
+	}
+
+	&-title {
+		font-size: 1.1rem;
+	}
+
+	&-menu {
+		display: flex;
+		align-items: center;
+		gap: 30px;
+		list-style: none;
+		margin: 0;
+	}
+
+	&-link {
+		color: var(--color-black) !important;
+		font-weight: 500;
+		text-decoration: none;
+		padding: 5px 0;
+	}
+
+	&-btn {
+		margin-left: 10px;
+	}
+
+	&-toggle {
+		display: none;
+		flex-direction: column;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 5px;
+
+		&.active {
+			.navbar-toggle-bar {
+				&:nth-child(1) {
+					transform: rotate(45deg) translate(5px, 5px);
+				}
+
+				&:nth-child(2) {
+					opacity: 0;
+				}
+
+				&:nth-child(3) {
+					transform: rotate(-45deg) translate(8px, -8px);
+				}
+			}
+		}
+
+		&-bar {
+			width: 25px;
+			height: 3px;
+			background-color: var(--color-black);
+			margin: 3px 0;
+			transition: all var(--transition-normal);
+		}
+	}
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.navbar {
+		border-bottom: 0;
+
+		&.scrolled {
+			background-color: var(--color-white);
+			-webkit-backdrop-filter: none;
+			backdrop-filter: none;
+			border-bottom: 0;
+		}
+	}
+	.navbar-menu {
+		position: fixed;
+		top: calc(var(--navbar-height) - 1px);
+		left: 0;
+		right: 0;
+		padding: 20px;
+		background-color: var(--color-white);
+		border-bottom: 1px solid rgba(39, 39, 42, 0.1);
+		box-shadow: var(--shadow-lg);
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0;
+		transform: translateX(-100%);
+		transition: transform var(--transition-normal);
+
+		&.active {
+			transform: translateX(0);
+		}
+
+		li {
+			width: auto;
+
+			.navbar-link {
+				display: block;
+				width: 100%;
+				padding: 15px 0;
+				border-bottom: 1px solid var(--color-gray-light);
+			}
+		}
+	}
+
+	.navbar-btn {
+		position: absolute;
+		bottom: 28px;
+		right: 24px;
+	}
+
+	.navbar-toggle {
+		display: flex;
+	}
+}

@@ -1,0 +1,39 @@
+/*
+ * Copyright (c) 2025 vinici.us.com. All Rights Reserved.
+ * Licensed under the MIT license.
+ */
+
+/* Tooltip */
+.tooltip {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	max-width: 300px;
+	padding: 10px 15px;
+	border-radius: 8px;
+	background-color: var(--color-primary);
+	color: var(--color-white);
+	font-size: 0.9rem;
+	line-height: 1.4;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity var(--transition-fast);
+
+	&.show {
+		opacity: 1;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: -5px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 0;
+		height: 0;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-bottom: 5px solid var(--color-primary);
+	}
+}
