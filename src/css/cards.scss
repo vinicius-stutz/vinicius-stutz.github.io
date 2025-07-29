@@ -1,0 +1,29 @@
+/*
+ * Copyright (c) 2025 vinici.us.com. All Rights Reserved.
+ * Licensed under the MIT license.
+ */
+
+/* Card component */
+.card {
+	background: var(--color-surface);
+	border-radius: var(--radius-lg);
+	border: 1px solid var(--color-card-border);
+	box-shadow: var(--shadow-sm);
+	overflow: hidden;
+	transition: box-shadow var(--duration-normal) var(--ease-standard);
+
+	&:hover {
+		box-shadow: var(--shadow-md);
+	}
+
+	&__header,
+	&__footer,
+	&__body {
+		padding: var(--space-16);
+	}
+
+	&__header,
+	&__footer {
+		border-bottom: 1px solid var(--color-card-border-inner);
+	}
+}

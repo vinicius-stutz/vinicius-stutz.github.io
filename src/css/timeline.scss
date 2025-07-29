@@ -1,0 +1,144 @@
+/*
+ * Copyright (c) 2025 vinici.us.com. All Rights Reserved.
+ * Licensed under the MIT license.
+ */
+
+.timeline {
+	position: relative;
+	max-width: 800px;
+	margin: 0 auto;
+	cursor: default !important;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 0;
+		bottom: 0;
+		width: 2px;
+		background-color: var(--color-gray-200);
+		transform: translateX(-50%);
+	}
+
+	&-item {
+		position: relative;
+		margin-bottom: 50px;
+		width: 45%;
+
+		&:nth-child(odd) {
+			left: 0;
+			text-align: right;
+
+			&::before {
+				right: -50px;
+			}
+
+			.timeline-year {
+				left: 120%;
+				text-align: left;
+			}
+		}
+
+		&:nth-child(even) {
+			left: 55%;
+			text-align: left;
+
+			&::before {
+				left: -50px;
+			}
+
+			.timeline-year {
+				left: -45%;
+				text-align: left;
+			}
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 20px;
+			width: 20px;
+			height: 20px;
+			background-color: var(--color-gray-200);
+			border-radius: 50%;
+			z-index: 1;
+		}
+
+		&:has(.timeline-content:hover)::before {
+			border: 1px solid var(--color-gray-300);
+		}
+	}
+
+	&-content {
+		background-color: var(--color-white);
+		color: var(--color-black);
+		padding: 30px;
+		border-radius: 10px;
+		transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+		border: 1px solid var(--color-gray-200);
+
+		&:hover {
+			transform: translateY(-5px);
+			border: 1px solid var(--color-gray-300);
+			box-shadow: var(--shadow-md);
+		}
+	}
+
+	&-year {
+		position: absolute;
+		margin: 20px 0;
+		font-size: 0.875rem;
+		font-weight: 300;
+		line-height: 1.25rem;
+		color: var(--color-gray-medium);
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		width: 120px;
+	}
+
+	&-role {
+		font-size: 1.4rem;
+		font-weight: 600;
+		letter-spacing: 0.05em;
+		margin-bottom: 0.25rem;
+		text-transform: uppercase;
+	}
+
+	&-company {
+		font-size: 0.875rem;
+		color: var(--color-gray-medium);
+		line-height: 1.25rem;
+	}
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.timeline {
+		&::before {
+			left: 20px;
+		}
+
+		.timeline-item {
+			width: 80%;
+			left: 40px !important;
+			text-align: left !important;
+
+			&::before {
+				left: -30px !important;
+				top: 0;
+			}
+
+			&:nth-child(odd),
+			&:nth-child(even) {
+				.timeline-year {
+					position: static;
+				}
+			}
+		}
+
+		.timeline-year {
+			position: static;
+			margin-bottom: 20px;
+		}
+	}
+}

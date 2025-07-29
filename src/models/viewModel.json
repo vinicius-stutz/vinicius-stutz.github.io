@@ -1,0 +1,261 @@
+{
+	"hero": {
+		"path": "./pages/hero.html"
+	},
+	"about": {
+		"path": "./pages/about.html",
+		"video": "./media/hero-390x390.mp4"
+	},
+	"resume": [
+		{
+			"year": "2022 — Atual",
+			"role": "<i class=\"fa-solid fa-chart-gantt\"></i> Coordenador",
+			"company": "GENIAL INVESTIMENTOS\n\nAdministração de fundos, Renda Fixa, Jurídico, Pagamentos, Backoffice e Fiscal"
+		},
+		{
+			"year": "2020 — 2022",
+			"role": "<i class=\"fa-solid fa-laptop-code\"></i> Fullstack Sr.",
+			"company": "ALTRAN (BTG Pactual)\n\nRegulatório, Contábil, Gerencial, Custos, Asset under Management e Net New Money"
+		},
+		{
+			"year": "2014 — 2020",
+			"role": "<i class=\"fa-solid fa-laptop-code\"></i>  Analista Pl.",
+			"company": "UNIÃO BRASILEIRA DE COMPOSITORES\n\nConstrução de APIs e Android/iOS mobile apps, Direito Autoral, Integrações com ECAD (arrecadação e distribuição)"
+		},
+		{
+			"year": "2008 — 2014",
+			"role": "<i class=\"fa-solid fa-laptop-code\"></i>  Analista Jr.",
+			"company": "MONTREAL TI (Detran/RJ)\n\nIdentificação Civil, Sistemas de Meritocracia e Gerenciamento de Projetos"
+		},
+		{
+			"year": "2005 — 2008",
+			"role": "<i class=\"fa-solid fa-wrench\"></i> Técnico",
+			"company": "ACCENTURE (Petrobras e Embratel)\n\nApoio ao usuário, Gestão de ativos de TI e Service desk (práticas do ITIL)"
+		}
+	],
+	"skills": [
+		{
+			"category": "Desenvolivimento",
+			"items": [
+				".NET",
+				"C#",
+				"HTML5",
+				"CSS3",
+				"EcmaScript",
+				"TypeScript",
+				"ReactJS",
+				"jQuery",
+				"RabbitMQ",
+				"AWS SQS",
+				"AWS S3"
+			]
+		},
+		{
+			"category": "Bancos de Dados",
+			"items": [
+				"Oracle",
+				"SQL Server",
+				"PostgreSQL",
+				"MySQL",
+				"MongoDB",
+				"DynamoDB"
+			]
+		},
+		{
+			"category": "Experiência Visual",
+			"items": [
+				"Prototipagem",
+				"Criação de logomarcas",
+				"Esquema de cores",
+				"Identidade visual",
+				"Edição de imagens"
+			]
+		},
+		{
+			"category": "Domínio de Negócio",
+			"items": [
+				"Banking",
+				"Meios de pagamento",
+				"Fundos de investimento",
+				"Administração fiduciária",
+				"AuM",
+				"Net New Money",
+				"Mercado da Música",
+				"Direito Autoral",
+				"Identificação Civil",
+				"Petróleo e gás",
+				"Gestão de ativos de TI",
+				"ITIL"
+			]
+		}
+	],
+	"testimonials": [
+		{
+			"name": "Elisa E.",
+			"text": "Profissional competente e inovador. Trabalhamos em diversos projetos juntos. Ele tem uma excelente capacidade de ouvir e entender as necessidades do projeto, e propôr soluções inovadoras. Ótimo designer com uma entrega rápida e precisa. Além disso é muito divertido e um bom colega de trabalho.",
+			"avatar": "images/elisa-e-100x100.webp"
+		},
+		{
+			"name": "Leandro B.",
+			"text": "Profissional, competente, responsável e inovador. Com o seu bom humor e alegria torna o trabalho mais agradável.",
+			"avatar": "images/leandro-b-100x100.webp"
+		},
+		{
+			"name": "Marcos L.",
+			"text": "Profissionalmente sempre foi uma pessoa honesta, disciplinada e presente. Sempre contribuiu a altura quando exigido. Tem uma formação e uma bagagem técnica muito grande, que permitiu em diversos momentos uma solução rápida e segura. Agradeço por ter Vinícius como amigo e espero poder contar sempre com sua dedicação e habilidade.",
+			"avatar": "images/marcos-l-100x100.webp"
+		},
+		{
+			"name": "Victor S.",
+			"text": "Além de bom desenvolvedor é EXCELENTE designer. Procura sempre conhecer o que há de novo no mercado e aprende novas tecnologias com facilidade.",
+			"avatar": "images/victor-s-100x100.webp"
+		},
+		{
+			"name": "Hernand A.",
+			"text": "Vinícius é um mestre em JQuery e CSS. Um profissional completo por ser um ótimo programador(.NET) e ter forte base em design de aplicações WEB.",
+			"avatar": "images/hernand-a-100x100.webp"
+		},
+		{
+			"name": "Vitor P.",
+			"text": "Vinícius é um profissional dinâmico, pró-ativo e competente. Sempre atento à novas tecnologias e sua aplicação ao negócio, agregando valor técnico ao core business do projeto em que trabalhamos. Com certeza é um grande ativo em qualquer equipe.",
+			"avatar": "images/vitor-p-100x100.webp"
+		}
+	],
+	"faq": [
+		{
+			"question": "Por que você prefere o C# à outras linguagens de programação?",
+			"answer": "Porque C# combina simplicidade, robustez e forte integração com o ecossistema .NET, oferecendo recursos modernos como tipagem forte, orientação a objetos e suporte a programação assíncrona, ideal para aplicações empresariais."
+		},
+		{
+			"question": "Quais são os principais recursos do C# usados em projetos do mercado financeiro?",
+			"answer": "- Programação assíncrona (async/await) para alto desempenho;\n- LINQ para consultas eficientes a dados em coleções;\n- Tipos genéricos para código reutilizável e seguro;\n- Suporte robusto a APIs e integração com sistemas externos."
+		},
+		{
+			"question": "Como funciona a programação assíncrona em C# e por que ela é importante em aplicações financeiras?",
+			"answer": "O uso de async/await permite executar tarefas demoradas sem travar o sistema, melhorando a performance e a experiência do usuário, especialmente em operações de alta demanda, como processamento de transações."
+		},
+		{
+			"question": "Como garantir a segurança e a performance em aplicações .NET?",
+			"answer": "- Uso de autenticação e criptografia de dados;\n- Validação rigorosa de entradas;\n- Monitoramento e observabilidade;\n- Atualização constante de dependências e frameworks."
+		},
+		{
+			"question": "O que é mensageria e por que ela é fundamental em sistemas financeiros?",
+			"answer": "Mensageria é a comunicação entre sistemas por meio do envio de mensagens. É essencial para garantir integração confiável, desacoplamento e escalabilidade em ambientes financeiros críticos."
+		},
+		{
+			"question": "Quais protocolos ou ferramentas de mensageria você mais utiliza?",
+			"answer": "Utilizo RabbitMQ, AWS SQS e Kafka.\n- AWS SQS: Simples, escalável e gerenciado, ideal para filas de mensagens.\n- Kafka: Alta performance e tolerância a falhas, ótimo para processar grandes volumes de dados em tempo real.\n- RabbitMQ: Flexibilidade de roteamento via exchanges, confiabilidade, simplicidade e facilidade na integração."
+		},
+		{
+			"question": "Como garantir a entrega e integridade das mensagens em sistemas distribuídos?",
+			"answer": "- Implementação de mecanismos de confirmação (acknowledgment);\n- Persistência de mensagens;\n- Monitoramento de filas e logs de erro;\n- Estratégias de retry e dead-letter queues."
+		},
+		{
+			"question": "Quando optar por bancos de dados relacionais (SQL) e quando escolher bancos não relacionais (NoSQL)?",
+			"answer": "- SQL: Quando há necessidade de transações, integridade e relações complexas entre dados.\n- NoSQL: Para grandes volumes de dados, flexibilidade de estrutura e escalabilidade horizontal."
+		},
+		{
+			"question": "Quais bancos de dados você recomenda para aplicações financeiras e por quê?",
+			"answer": "- SQL Server, Oracle e PostgreSQL: Confiáveis, seguros e com suporte a transações ACID.\n- MongoDB: Útil para cenários que exigem flexibilidade e alta escalabilidade, mas sempre avaliando os requisitos de consistência."
+		},
+		{
+			"question": "Como garantir a integridade e a segurança dos dados em bancos de dados?",
+			"answer": "- Uso de transações e constraints;\n- Criptografia de dados em repouso e em trânsito;\n- Políticas de backup e recovery;\n- Controle de acesso rigoroso."
+		},
+		{
+			"question": "Quais são os desafios de escalar bancos de dados em ambientes de alta demanda?",
+			"answer": "- Gerenciar concorrência e bloqueios;\n- Garantir consistência dos dados;\n- Otimizar índices e consultas;\n- Implementar particionamento e replicação."
+		},
+		{
+			"question": "Como o branding influencia o desenvolvimento de produtos digitais?",
+			"answer": "Um branding forte orienta o design, a comunicação e a experiência do usuário, tornando o produto mais reconhecível, confiável e alinhado com os valores do público-alvo."
+		},
+		{
+			"question": "Quais tecnologias front-end você utiliza?",
+			"answer": "- ReactJS: Componentização e alta performance.\n- Typescript: Segurança de tipos e manutenção facilitada.\n- EcmaScript: Padrão moderno e compatível com as melhores práticas do mercado."
+		},
+		{
+			"question": "Como garantir uma boa experiência do usuário (UX) em aplicações financeiras?",
+			"answer": "- Interfaces intuitivas e responsivas;\n- Feedback visual claro para ações do usuário;\n- Foco em acessibilidade e segurança;\n- Testes constantes com usuários reais."
+		},
+		{
+			"question": "Como é o dia-a-dia de um desenvolvedor C# no mercado financeiro?",
+			"answer": "Envolve análise de requisitos, desenvolvimento de sistemas críticos, integração com bancos e APIs, resolução de incidentes e atualização constante de conhecimentos."
+		},
+		{
+			"question": "Quais habilidades são essenciais para atuar no setor financeiro?",
+			"answer": "- Domínio de C# e .NET;\n- Conhecimento em bancos de dados e mensageria;\n- Noções de segurança da informação;\n- Capacidade analítica e resolução de problemas."
+		},
+		{
+			"question": "Como manter-se atualizado com as tendências tecnológicas do mercado financeiro?",
+			"answer": "- Participar de comunidades e eventos;\n- Ler blogs, artigos e publicações especializadas;\n- Realizar cursos e certificações;\n- Trocar experiências com outros profissionais."
+		},
+		{
+			"question": "Que dicas você daria para quem deseja começar a trabalhar com C# e .NET?",
+			"answer": "- Pratique com projetos reais e desafios práticos;\n- Estude a fundo a documentação oficial;\n- Busque entender conceitos de arquitetura e boas práticas;\n- Participe de fóruns e grupos de discussão para trocar conhecimento."
+		}
+	],
+	"social": [
+		{
+			"name": "LinkedIn",
+			"url": "https://www.linkedin.com/in/viniciusstutz",
+			"icon": "fab fa-linkedin"
+		},
+		{
+			"name": "GitHub",
+			"url": "https://github.com/vinicius-stutz",
+			"icon": "fab fa-github"
+		},
+		{
+			"name": "Behance",
+			"url": "https://www.behance.net/vinicius-stutz",
+			"icon": "fab fa-behance"
+		},
+		{
+			"name": "CodePen",
+			"url": "https://codepen.io/vinicius-stutz",
+			"icon": "fab fa-codepen"
+		},
+		{ "name": "Dev.to", "url": "https://dev.to/stutz", "icon": "fab fa-dev" },
+		{
+			"name": "Medium",
+			"url": "https://medium.com/vinicius-stutz",
+			"icon": "fab fa-medium"
+		},
+		{
+			"name": "Stack Exchange",
+			"url": "https://stackexchange.com/users/1769545/vini",
+			"icon": "fab fa-stack-overflow"
+		},
+		{
+			"name": "X",
+			"url": "https://x.com/vinicius_stutz",
+			"icon": "fab fa-twitter"
+		},
+		{
+			"name": "Reddit",
+			"url": "https://www.reddit.com/user/vinicius-stutz/",
+			"icon": "fab fa-reddit"
+		},
+		{
+			"name": "YouTube",
+			"url": "https://www.youtube.com/@ViniciusStutz",
+			"icon": "fab fa-youtube"
+		},
+		{
+			"name": "Vimeo",
+			"url": "https://vimeo.com/stutz",
+			"icon": "fab fa-vimeo"
+		},
+		{
+			"name": "Product Hunt",
+			"url": "https://www.producthunt.com/@vinicius_stutz",
+			"icon": "fab fa-product-hunt"
+		}
+	],
+	"modal": [
+		"./pages/collections.html",
+		"./pages/policy.html",
+		"./pages/terms.html"
+	]
+}

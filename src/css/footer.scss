@@ -1,0 +1,111 @@
+/*
+ * Copyright (c) 2025 vinici.us.com. All Rights Reserved.
+ * Licensed under the MIT license.
+ */
+
+/* Footer */
+.footer {
+	background-color: var(--color-black);
+	color: var(--color-white);
+	padding: 50px 0 30px;
+
+	.footer-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 30px;
+	}
+
+	.footer-left,
+	.footer-right {
+		width: 100%;
+	}
+
+	.footer-top {
+		display: flex;
+		align-items: center;
+		justify-content: right;
+		gap: 10px;
+		font-weight: 500;
+		text-decoration: none;
+
+		.footer-arrow {
+			transition: transform var(--transition-normal);
+		}
+
+		&:hover .footer-arrow {
+			transform: translateY(-3px);
+		}
+	}
+
+	.footer-social {
+		display: flex;
+		gap: 10px;
+
+		a > i {
+			color: var(--color-white);
+			font-size: 1.2rem;
+			transition: color var(--transition-fast);
+		}
+
+		// Redes sociais com suas cores
+		$social-colors: (
+			fa-linkedin: #0a66c2,
+			fa-github: #6e5494,
+			fa-behance: #1769ff,
+			fa-codepen: #0ebeff,
+			fa-dev: #999999,
+			fa-medium: #00ab6c,
+			fa-stack-overflow: #f48024,
+			fa-twitter: #1da1f2,
+			fa-reddit: #ff4500,
+			fa-youtube: #ff0000,
+			fa-vimeo: #1ab7ea,
+			fa-product-hunt: #da552f,
+		);
+
+		@each $icon, $color in $social-colors {
+			a:hover > i.#{$icon} {
+				color: $color;
+			}
+		}
+	}
+
+	.footer-copyright {
+		margin-bottom: 20px;
+		font-size: 0.9rem;
+	}
+
+	.footer-legal {
+		text-align: center;
+		padding-top: 30px;
+		border-top: 1px solid rgba(255, 255, 255, 0.2);
+		font-size: 0.9rem;
+
+		a {
+			color: var(--color-white);
+			font-weight: 600;
+		}
+	}
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.footer-content {
+		flex-direction: column;
+		gap: 30px;
+		text-align: center;
+	}
+
+	.footer-copyright,
+	.footer-legal {
+		font-size: var(--font-size-xs);
+	}
+
+	.footer {
+		.footer-social,
+		.footer-top {
+			justify-content: center;
+		}
+	}
+}

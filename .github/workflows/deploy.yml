@@ -1,0 +1,50 @@
+# Copyright (c) 2025 vinici.us.com. All Rights Reserved.
+# Licensed under the MIT license.
+
+name: Deploy dist from release to main
+
+on:
+  push:
+    branches:
+      - release
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout release branch
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
+
+      - name: Copy dist to main
+        run: |
+          rm -rf main/*
+          cp -r dist/* main/
+          cp README.md main/
+          if [ -f LICENSE ]; then cp LICENSE main/; fi
+        # Adapte a linha acima se quiser preservar o README ou outros arquivos.
+
+      - name: Commit and push to main
+        run: |
+          cd main
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Deploy automático da release para main [skip ci]" || echo "Nada para commit"
+          git push origin main
