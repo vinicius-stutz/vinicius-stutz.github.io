@@ -20,10 +20,10 @@ const notify = (bannerSelector, acceptSelector, declineSelector) => {
 	const banner = dom.get(bannerSelector);
 	const acceptBtn = dom.get(acceptSelector);
 	const declineBtn = dom.get(declineSelector);
-	const COOKIE_CONSENT_KEY = 'userCookieConsent';
+	const PRIVACY_CONSENT_KEY = 'userPrivacyConsent';
 
 	// Check if consent has already been given
-	if (localStorage.getItem(COOKIE_CONSENT_KEY) === 'accepted') {
+	if (localStorage.getItem(PRIVACY_CONSENT_KEY) === 'accepted') {
 		return; // Don't show the banner
 	}
 
@@ -41,7 +41,7 @@ const notify = (bannerSelector, acceptSelector, declineSelector) => {
 	};
 
 	const handleAccept = () => {
-		localStorage.setItem(COOKIE_CONSENT_KEY, 'accepted');
+		localStorage.setItem(PRIVACY_CONSENT_KEY, 'accepted');
 		hide();
 	};
 
