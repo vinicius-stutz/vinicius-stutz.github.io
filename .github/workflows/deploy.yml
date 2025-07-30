@@ -1,7 +1,7 @@
 # Copyright (c) 2025 vinici.us.com. All Rights Reserved.
 # Licensed under the MIT license.
 
-name: Deploy dist from release to main
+name: Deploy dist from release to master
 
 on:
   push:
@@ -28,25 +28,25 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Checkout main branch (em subpasta)
+      - name: Checkout master branch (em subpasta)
         uses: actions/checkout@v4
         with:
-          ref: main
-          path: main
+          ref: master
+          path: master
           fetch-depth: 0
 
-      - name: Copy dist, README.md, LICENSE para main
+      - name: Copy dist, README.md, LICENSE para master
         run: |
-          rm -rf main/*
-          cp -r dist/* main/
-          cp README.md main/
-          if [ -f LICENSE ]; then cp LICENSE main/; fi
+          rm -rf master/*
+          cp -r dist/* master/
+          cp README.md master/
+          if [ -f LICENSE ]; then cp LICENSE master/; fi
 
-      - name: Commit and push para main
+      - name: Commit and push para master
         run: |
-          cd main
+          cd master
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Deploy automático da release para main [skip ci]" || echo "Nada para commit"
-          git push origin main
+          git commit -m "Deploy automático da release para master [skip ci]" || echo "Nenhum deploy a realizar"
+          git push origin master
