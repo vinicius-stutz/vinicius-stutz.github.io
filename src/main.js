@@ -79,7 +79,7 @@ const hidePreloader = (selector) => {
 		document.documentElement.style.overflow = '';
 		document.body.style.overflow = '';
 		window.onscroll = null;
-	});
+	}, { once: true });
 };
 
 /**
@@ -89,7 +89,7 @@ const hidePreloader = (selector) => {
  */
 const init = async () => {
 	// cookie warning
-	cookies.notify('#cookie-banner', '#cookie-accept', '#cookie-decline');
+	cookies.notify('#privacy-message', '#privacy-accept', '#privacy-decline');
 
 	// Load HTML content for various sections
 	await Promise.all([

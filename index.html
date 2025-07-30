@@ -50,7 +50,11 @@
     <link rel="manifest" href="/site.webmanifest">
 
     <!-- Preloader -->
-    <link href="/css/preloader.css?v=1.0.0" rel="stylesheet" role="progressbar" title="preloader" crossorigin>
+    <link href="/css/preloader.css?v=1.0.0" rel="preload" as="style" role="progressbar" title="preloader" crossorigin
+        onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/css/preloader.css?v=1.0.0">
+    </noscript>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -63,7 +67,7 @@
 </head>
 
 <body>
-    <div id="preloader">
+    <div id="preloader" aria-busy="true">
         <div class="loader-text">
             Carregando, aguarde
             <span>.</span>
@@ -72,17 +76,16 @@
         </div>
     </div>
 
-    <!-- Cookie Consent Banner -->
-    <div id="cookie-banner" class="cookie-banner">
-        <div class="cookie-content">
-            <p>Este site utiliza cookies para melhorar a experiência do usuário. Ao continuar navegando, você concorda
-                com as
+    <!-- Privacy Consent Banner -->
+    <div id="privacy-message" class="privacy-message">
+        <div class="privacy-content">
+            <p>Este site utiliza recursos para aprimorar navegação e serviços. Você aceita as
                 <a href="#policy" data-modal="policy" data-title="Política de privacidade"
-                    id="cookie-policy">políticas</a> deste site.
+                    id="message-policy-link">políticas de privacidade</a> deste site?
             </p>
-            <div class="cookie-buttons">
-                <button id="cookie-accept" name="cookie-accept" class="btn btn--primary btn--sm">Aceitar</button>
-                <button id="cookie-decline" name="cookie-decline" class="btn btn--outline btn--sm">Recusar</button>
+            <div class="privacy-buttons">
+                <button id="privacy-accept" name="privacy-accept" class="btn btn--primary btn--sm">Aceitar</button>
+                <button id="privacy-decline" name="privacy-decline" class="btn btn--outline btn--sm">Recusar</button>
             </div>
         </div>
     </div>
@@ -278,7 +281,7 @@
     </div>
 
     <!-- Initialization -->
-    <script type="module" src="/src/main.js?v=1.1.0"></script>
+    <script defer type="module" src="/src/main.js?v=1.1.0"></script>
 
     <!-- Google Analytics & Tawkto -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HGD4W4KXSP"></script>
