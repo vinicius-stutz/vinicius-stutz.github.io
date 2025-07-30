@@ -1,24 +1,18 @@
 <div align="center">
   <a href="https://vinici.us.com/">
-    <img src="https://www.vinici.us.com/images/logo.png" alt="Logo" width="120" height="120">
+    <img src="https://vinicius-stutz.github.io/images/logo.png" alt="Logo" width="120" height="120">
   </a>
-  <h1 align="center">Meu site pessoal · vinici.us.com</h1>
+  <h1 align="center">vinici.us.com</h1>
   <p align="center">
-    Analista fullstack certificado pela Microsoft™ com mais de 20 anos de experiência em desenvolvimento com código limpo, elegante e coeso.
-    <br />
-	<br />
-    Veja o projeto no ar <a href="https://vinici.us.com/"><strong>clicando aqui</strong>.</a>
+    Meu site pessoal (veja o projeto no ar <a href="https://vinici.us.com/"><strong>clicando aqui</strong></a>).
     <br />
     <br />
     <a href="https://github.com/vinicius-stutz/vinicius-stutz.github.io/issues">Reportar Bug</a>
-    - <a href="https://github.com/vinicius-stutz/vinicius-stutz.github.io/issues">Solicitar Feature</a>
+    | <a href="https://github.com/vinicius-stutz/vinicius-stutz.github.io/issues">Solicitar Feature</a>
   </p>
 </div>
 
 ---
-
-**Sumário**
-[TOC]
 
 ## Sobre o Projeto
 
@@ -45,6 +39,14 @@ Este projeto foi construído utilizando as seguintes tecnologias:
   - JavaScript (ES Modules)
 - **CI/CD**: GitHub Actions
 - **Hosting**: GitHub Pages
+
+### Roadmap
+
+Previsto:
+
+1. ReactJS SWC com Typescript e Vite
+2. React Tooltip
+3. Integração com serviços de blog
 
 ---
 
@@ -93,7 +95,7 @@ O deploy é automatizado através do workflow definido em `.github/workflows/dep
 
 1.  Todo o desenvolvimento é feito em outras branches (ex: `develop`).
 2.  Quando uma nova versão está pronta para ser publicada, as alterações são mescladas na branch `release`.
-3.  Um `push` na branch `release` aciona a GitHub Action.
+3.  Um `merge` na branch `release` aciona a GitHub Action.
 4.  A Action executa o `npm run build` para compilar e otimizar os arquivos do projeto.
 5.  O conteúdo da pasta `dist` gerada é então copiado e commitado na branch `master`, que é a branch servida pelo GitHub Pages.
 

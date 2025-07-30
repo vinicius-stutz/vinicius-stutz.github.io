@@ -4,7 +4,7 @@
  * To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.
  */
 
-.cookie-banner {
+.privacy-message {
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -23,7 +23,7 @@
 	}
 }
 
-.cookie-content {
+.privacy-content {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -50,7 +50,7 @@
 	}
 }
 
-.cookie-buttons {
+.privacy-buttons {
 	display: flex;
 	gap: 10px;
 
@@ -82,7 +82,7 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-	.cookie-content {
+	.privacy-content {
 		flex-direction: column;
 		gap: 15px;
 		text-align: center;
