@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout release branch
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -26,21 +28,21 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Checkout main branch
+      - name: Checkout main branch (em subpasta)
         uses: actions/checkout@v4
         with:
           ref: main
           path: main
+          fetch-depth: 0
 
-      - name: Copy dist to main
+      - name: Copy dist, README.md, LICENSE para main
         run: |
           rm -rf main/*
           cp -r dist/* main/
           cp README.md main/
           if [ -f LICENSE ]; then cp LICENSE main/; fi
-        # Adapte a linha acima se quiser preservar o README ou outros arquivos.
 
-      - name: Commit and push to main
+      - name: Commit and push para main
         run: |
           cd main
           git config user.name "github-actions[bot]"
