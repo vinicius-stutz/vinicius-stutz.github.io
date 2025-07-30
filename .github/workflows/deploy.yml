@@ -36,12 +36,13 @@ jobs:
           path: master
           fetch-depth: 0
 
-      - name: Copy dist, README.md, LICENSE para master
+      - name: Copy dist, README.md, LICENSE para master. Setting up the domain.
         run: |
           rm -rf master/*
           cp -r dist/* master/
           cp README.md master/
           if [ -f LICENSE ]; then cp LICENSE master/; fi
+          echo "vinici.us.com" > master/CNAME
 
       - name: Commit and push para master
         run: |
