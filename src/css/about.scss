@@ -49,14 +49,23 @@
 }
 
 #about-cta {
-	display: flex;
+	display: grid;
 	gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+	justify-content: center;
+	align-content: center;
+	align-items: center;
 
-	a > i {
-		color: var(--color-white);
-		font-size: 1.2rem;
-		transition: color var(--transition-fast);
+	a {
+		text-align: center;
+
+		> i {
+			color: var(--color-white);
+			font-size: 1.2rem;
+			transition: color var(--transition-fast);
+		}
 	}
+
 	a:hover > i {
 		color: var(--color-gray-300);
 	}
