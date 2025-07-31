@@ -100,6 +100,8 @@ const init = async () => {
 
 	loadVideoSource('.about-video-element', model.about.video);
 
+	social.load('#about-cta', model.social);
+
 	// services
 	resume.load('#timeline-content', model.resume);
 	skills.load('#skills-content', model.skills);

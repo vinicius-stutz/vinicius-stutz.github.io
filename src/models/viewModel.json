@@ -37,55 +37,58 @@
 		{
 			"category": "Desenvolivimento",
 			"items": [
-				".NET",
-				"C#",
-				"HTML5",
-				"CSS3",
-				"EcmaScript",
-				"TypeScript",
-				"ReactJS",
-				"jQuery",
-				"RabbitMQ",
-				"AWS SQS",
-				"AWS S3"
+				"<i class=\"fa-brands fa-microsoft\"></i> .NET",
+				"<i class=\"fa-brands fa-microsoft\"></i> C#",
+				"<i class=\"fa-brands fa-html5\"></i> HTML5",
+				"<i class=\"fa-brands fa-css3\"></i> CSS3",
+				"<i class=\"fa-brands fa-square-js\"></i> EcmaScript",
+				"<i class=\"fa-brands fa-square-js\"></i> TypeScript",
+				"<i class=\"fa-brands fa-react\"></i> ReactJS",
+				"<i class=\"fa-solid fa-scroll\"></i> jQuery",
+				"<i class=\"fa-solid fa-check-double\"></i> RabbitMQ",
+				"<i class=\"fa-brands fa-aws\"></i> AWS SQS",
+				"<i class=\"fa-brands fa-aws\"></i> AWS S3",
+				"<i class=\"fa-brands fa-square-github\"></i> Github Actions"
 			]
 		},
 		{
 			"category": "Bancos de Dados",
 			"items": [
-				"Oracle",
-				"SQL Server",
-				"PostgreSQL",
-				"MySQL",
-				"MongoDB",
-				"DynamoDB"
+				"<i class=\"fa-solid fa-database\"></i> Oracle",
+				"<i class=\"fa-brands fa-microsoft\"></i> SQL Server",
+				"<i class=\"fa-solid fa-database\"></i> PostgreSQL",
+				"<i class=\"fa-solid fa-database\"></i> MySQL",
+				"<i class=\"fa-brands fa-aws\"></i> AWS RDS",
+				"<i class=\"fa-solid fa-leaf\"></i> MongoDB",
+				"<i class=\"fa-brands fa-aws\"></i> DynamoDB"
 			]
 		},
 		{
 			"category": "Experiência Visual",
 			"items": [
-				"Prototipagem",
-				"Criação de logomarcas",
-				"Esquema de cores",
-				"Identidade visual",
-				"Edição de imagens"
+				"<i class=\"fa-solid fa-pencil\"></i> Prototipagem",
+				"<i class=\"fa-solid fa-eye\"></i> Criação de logomarcas",
+				"<i class=\"fa-solid fa-eye-dropper\"></i> Esquema de cores",
+				"<i class=\"fa-solid fa-box\"></i> Identidade visual",
+				"<i class=\"fa-solid fa-panorama\"></i> Edição de imagens",
+				"<i class=\"fa-solid fa-draw-polygon\"></i> Desenho vetorial"
 			]
 		},
 		{
 			"category": "Domínio de Negócio",
 			"items": [
-				"Banking",
-				"Meios de pagamento",
-				"Fundos de investimento",
-				"Administração fiduciária",
-				"AuM",
-				"Net New Money",
-				"Mercado da Música",
-				"Direito Autoral",
-				"Identificação Civil",
-				"Petróleo e gás",
-				"Gestão de ativos de TI",
-				"ITIL"
+				"<i class=\"fa-solid fa-building-columns\"></i> Banking",
+				"<i class=\"fa-solid fa-credit-card\"></i> Meios de pagamento",
+				"<i class=\"fa-solid fa-money-bill-trend-up\"></i> Fundos de investimento",
+				"<i class=\"fa-solid fa-people-roof\"></i> Administração fiduciária",
+				"<i class=\"fa-solid fa-magnifying-glass-dollar\"></i> AuM",
+				"<i class=\"fa-solid fa-money-bill-transfer\"></i> Net New Money",
+				"<i class=\"fa-solid fa-music\"></i> Mercado da Música",
+				"<i class=\"fa-solid fa-radio\"></i> Direito Autoral",
+				"<i class=\"fa-solid fa-id-card\"></i> Identificação Civil",
+				"<i class=\"fa-solid fa-oil-well\"></i> Petróleo e gás",
+				"<i class=\"fa-solid fa-computer\"></i> Gestão de ativos de TI",
+				"<i class=\"fa-solid fa-book\"></i> ITIL"
 			]
 		}
 	],
@@ -251,6 +254,16 @@
 			"name": "Product Hunt",
 			"url": "https://www.producthunt.com/@vinicius_stutz",
 			"icon": "fab fa-product-hunt"
+		},
+		{
+			"name": "Buy me a coffee",
+			"url": "https://buymeacoffee.com/vinici.us",
+			"icon": "fa-solid fa-mug-hot"
+		},
+		{
+			"name": "Gravatar",
+			"url": "https://gravatar.com/vinistutz",
+			"icon": "fa-solid fa-qrcode"
 		}
 	],
 	"modal": [

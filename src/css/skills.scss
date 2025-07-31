@@ -40,8 +40,13 @@
 	}
 
 	&-list {
-		list-style: circle;
+		list-style: none;
 		list-style-position: inside;
+		i {
+			color: var(--color-white);
+			opacity: 0.2;
+			margin-right: 6px;
+		}
 	}
 
 	&-item {

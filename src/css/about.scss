@@ -48,6 +48,20 @@
 	}
 }
 
+#about-cta {
+	display: flex;
+	gap: 10px;
+
+	a > i {
+		color: var(--color-white);
+		font-size: 1.2rem;
+		transition: color var(--transition-fast);
+	}
+	a:hover > i {
+		color: var(--color-gray-300);
+	}
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
 	.about-content {
