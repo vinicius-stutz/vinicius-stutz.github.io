@@ -63,6 +63,8 @@
 			fa-youtube: #ff0000,
 			fa-vimeo: #1ab7ea,
 			fa-product-hunt: #da552f,
+			fa-mug-hot: #ffc845,
+			fa-qrcode: #1e8cbe,
 		);
 
 		@each $icon, $color in $social-colors {
