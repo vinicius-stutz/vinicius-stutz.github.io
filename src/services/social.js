@@ -14,14 +14,16 @@ import dom from '../utils/dom.js';
  */
 const load = (selector, model) => {
 	const container = dom.get(selector);
-	model.forEach((s) => {
-		const a = dom.create('a', '', /* html */ `<i class="${s.icon}"></i>`);
-		a.href = s.url;
-		a.target = '_blank';
-		a.rel = 'noopener noreferrer';
+	if (container) {
+		model.forEach((s) => {
+			const a = dom.create('a', '', /* html */ `<i class="${s.icon}"></i>`);
+			a.href = s.url;
+			a.target = '_blank';
+			a.rel = 'noopener noreferrer';
 
-		container.appendChild(a);
-	});
+			container.appendChild(a);
+		});
+	}
 };
 
 export default { load };

@@ -6,25 +6,28 @@
 
 /* Utility classes */
 .flex {
-	display: flex;
+	display: flex !important;
 }
 .flex-col {
-	flex-direction: column;
+	flex-direction: column !important;
 }
 .items-center {
-	align-items: center;
+	align-items: center !important;
 }
 .justify-center {
-	justify-content: center;
+	justify-content: center !important;
 }
 .justify-between {
-	justify-content: space-between;
+	justify-content: space-between !important;
 }
 .no-scroll {
-	overflow: hidden;
+	overflow: hidden !important;
+}
+.text-center {
+	text-align: center !important;
 }
 
-@each $n in 4, 8, 16, 30 {
+@each $n in 4, 8, 16, 30, 32 {
 	.gap-#{$n} {
 		gap: var(--space-#{$n});
 	}
@@ -52,18 +55,23 @@
 	}
 }
 
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .m-0 {
-	margin: 0;
+	margin: 0 !important;
 }
 .p-0 {
-	padding: 0;
+	padding: 0 !important;
 }
 
 .block {
-	display: block;
+	display: block !important;
 }
 .hidden {
-	display: none;
+	display: none !important;
 }
 
 /* Accessibility */

@@ -49,10 +49,12 @@ const init = (navbarSelector, menuSelector, toggleSelector, linkListSelector) =>
 	const navLinks = Array.from(dom.getAll(linkListSelector));
 
 	// Mobile toggle
-	toggle.addEventListener('click', () => {
-		toggle.classList.toggle('active');
-		menu.classList.toggle('active');
-	});
+	if (toggle) {
+		toggle.addEventListener('click', () => {
+			toggle.classList.toggle('active');
+			menu.classList.toggle('active');
+		});
+	}
 
 	// Navigation links
 	// Animated navigation + address bar update
@@ -74,14 +76,14 @@ const init = (navbarSelector, menuSelector, toggleSelector, linkListSelector) =>
 	// Scroll event to add background and update active nav link
 	window.addEventListener('scroll', () => {
 		if (window.scrollY > 50) {
-			navbar.classList.add('scrolled');
+			navbar?.classList.add('scrolled');
 		} else {
-			navbar.classList.remove('scrolled');
+			navbar?.classList.remove('scrolled');
 		}
 
 		// Update history.pushState according to the visible section
 		const sections = Array.from(document.querySelectorAll('section[id], header[id]'));
-		const navbarHeight = navbar.offsetHeight;
+		const navbarHeight = navbar?.offsetHeight ?? 0;
 		let currentSectionId = null;
 
 		for (let i = 0; i < sections.length; i++) {

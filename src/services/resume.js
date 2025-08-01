@@ -14,8 +14,10 @@ import dom from '../utils/dom.js';
  */
 const load = (selector, model) => {
 	const container = dom.get(selector);
-	model.forEach((item) => {
-		const wrapper = dom.create('div', 'timeline-item', /*html*/ `
+
+	if (container) {
+		model.forEach((item) => {
+			const wrapper = dom.create('div', 'timeline-item', /*html*/ `
 			<div class="timeline-year">${item.year}</div>
 			<div class="timeline-content">
 				<div class="timeline-role">${item.role}</div>
@@ -23,8 +25,9 @@ const load = (selector, model) => {
 			</div>
 		`);
 
-		container.appendChild(wrapper);
-	});
+			container.appendChild(wrapper);
+		});
+	}
 };
 
 export default { load };

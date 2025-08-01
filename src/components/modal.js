@@ -10,8 +10,13 @@ import scrollbar from '../utils/scrollbar.js';
 // Open
 const open = (title, content) => {
 	const modal = dom.getById('modal');
+	if (!modal) return;
+
 	const modalTitle = dom.getById('modal-title');
+	if (!modalTitle) return;
+
 	const modalContent = dom.getById('modal-content');
+	if (!modalContent) return;
 
 	modalTitle.innerHTML = title;
 	modalContent.innerHTML = content;
@@ -22,6 +27,8 @@ const open = (title, content) => {
 // Close
 const close = () => {
 	const modal = dom.getById('modal');
+	if (!modal) return;
+
 	modal.classList.remove('show');
 	scrollbar.enableScroll();
 };
@@ -57,6 +64,8 @@ const init = async (modalPathList) => {
 		el.addEventListener('click', async (e) => {
 			e.preventDefault();
 			const modalType = el.getAttribute('data-modal');
+			if (!modalType) return;
+
 			const title = el.getAttribute('data-title') || '';
 
 			const htmlPath = modalPaths[modalType];
@@ -73,14 +82,20 @@ const init = async (modalPathList) => {
 	});
 
 	// Listener to close the modal
-	dom.getById('modal-close').addEventListener('click', close);
+	const closeBtn = dom.getById('modal-close');
+	if (closeBtn) {
+		dom.getById('modal-close').addEventListener('click', close);
+	}
 
 	// Close a modal click outside the modal content
-	dom.getById('modal').addEventListener('click', (e) => {
-		if (e.target === e.currentTarget) {
-			close();
-		}
-	});
+	const modal = dom.getById('modal');
+	if (modal) {
+		dom.getById('modal').addEventListener('click', (e) => {
+			if (e.target === e.currentTarget) {
+				close();
+			}
+		});
+	}
 
 	// Close modal on Escape key press
 	dom.addListener('keydown', (e) => {

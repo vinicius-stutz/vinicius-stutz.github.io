@@ -4,6 +4,16 @@
  * To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.
  */
 
+import { resolve } from 'path'
+
 export default {
 	base: '/',
+	build: {
+		rollupOptions: {
+			input: {
+				main: resolve(__dirname, 'index.html'),
+				bio: resolve(__dirname, 'bio.html'),
+			}
+		}
+	}
 }
