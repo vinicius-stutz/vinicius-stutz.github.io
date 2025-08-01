@@ -119,7 +119,7 @@ const init = async () => {
 	navbar.init('#navbar', '#navbar-menu', '#navbar-toggle', 'a[href^="#"]');
 
 	// scroller
-	const navbarHeight = dom.get('#navbar').offsetHeight; // Adjust offset for navbar height
+	const navbarHeight = dom.get('#navbar')?.offsetHeight ?? 0; // Adjust offset for navbar height
 	scroll.init(navbarHeight);
 
 	// open modal depends address bar

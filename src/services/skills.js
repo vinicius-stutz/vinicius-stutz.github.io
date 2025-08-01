@@ -14,16 +14,18 @@ import dom from '../utils/dom.js';
  */
 const load = (selector, model) => {
 	const container = dom.get(selector);
-	model.forEach((skill) => {
-		const card = dom.create('div', 'skill-card', /*html*/ `
-			<h3 class="skill-category">${skill.category}</h3>
-			<ul class="skill-list">
-				${skill.items.map((i) => /*html*/ `<li class="skill-item">${i}</li>`).join('')}
-			</ul>
-		`);
+	if (container) {
+		model.forEach((skill) => {
+			const card = dom.create('div', 'skill-card', /*html*/ `
+				<h3 class="skill-category">${skill.category}</h3>
+				<ul class="skill-list">
+					${skill.items.map((i) => /*html*/ `<li class="skill-item">${i}</li>`).join('')}
+				</ul>
+			`);
 
-		container.appendChild(card);
-	});
+			container.appendChild(card);
+		});
+	}
 };
 
 export default { load };

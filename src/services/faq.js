@@ -14,21 +14,23 @@ import dom from '../utils/dom.js';
  */
 const load = (selector, model) => {
 	const container = dom.get(selector);
-	model.forEach((f) => {
-		const item = dom.create('div', 'faq-item', /* html */ `
-			<button class="faq-question">
-				<span>${f.question}</span>
-				<i class="fas fa-plus faq-icon"></i>
-			</button>
-			<div class="faq-answer"><p>${f.answer.replace(/\n/g, '<br />')}</p></div>
-		`);
+	if (container) {
+		model.forEach((f) => {
+			const item = dom.create('div', 'faq-item', /* html */ `
+				<button class="faq-question">
+					<span>${f.question}</span>
+					<i class="fas fa-plus faq-icon"></i>
+				</button>
+				<div class="faq-answer"><p>${f.answer.replace(/\n/g, '<br />')}</p></div>
+			`);
 
-		item.querySelector('.faq-question').addEventListener('click', () => {
-			item.classList.toggle('active');
+			item.querySelector('.faq-question').addEventListener('click', () => {
+				item.classList.toggle('active');
+			});
+
+			container.appendChild(item);
 		});
-
-		container.appendChild(item);
-	});
+	}
 };
 
 export default { load };
