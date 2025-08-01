@@ -14,17 +14,19 @@ import dom from '../utils/dom.js';
  */
 const load = (selector, model) => {
 	const container = dom.get(selector);
-	model.forEach((t) => {
-		const card = dom.create('div', 'testimonial-card', /* html */`
-			<p class="testimonial-text">"${t.text}"</p>
-			<div class="testimonial-author">
-				<img src="${t.avatar}" alt="${t.name}" class="testimonial-avatar" />
-				<span class="testimonial-name">${t.name}</span>
-			</div>
-		`);
+	if (container) {
+		model.forEach((t) => {
+			const card = dom.create('div', 'testimonial-card', /* html */`
+				<p class="testimonial-text">"${t.text}"</p>
+				<div class="testimonial-author">
+					<img src="${t.avatar}" alt="${t.name}" class="testimonial-avatar" />
+					<span class="testimonial-name">${t.name}</span>
+				</div>
+			`);
 
-		container.appendChild(card);
-	});
+			container.appendChild(card);
+		});
+	}
 };
 
 export default { load };
